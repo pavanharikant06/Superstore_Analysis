@@ -1,0 +1,36 @@
+create database super_store;	
+use super_store;
+
+select * from c_store_dataset;
+
+SELECT Product_Name, SUM(Sales) AS Total_Sales
+FROM c_store_dataset
+GROUP BY Product_Name
+ORDER BY Total_Sales DESC
+LIMIT 5;
+
+SELECT DATE_FORMAT(Order_Date, '%Y-%m') AS Month, SUM(Sales) AS Monthly_Sales
+FROM c_store_dataset
+GROUP BY Month
+ORDER BY Month;
+
+SELECT Region, SUM(Profit) AS Total_Profit
+FROM c_store_dataset
+GROUP BY Region
+ORDER BY Total_Profit DESC;
+
+SELECT Region, SUM(Profit) AS Total_Profit
+FROM c_store_dataset
+GROUP BY Region
+ORDER BY Total_Profit DESC;
+
+SELECT Customer_Name, SUM(Sales) AS Total_Sales
+FROM c_store_dataset
+GROUP BY Customer_Name
+ORDER BY Total_Sales DESC
+LIMIT 10;
+
+
+
+
+
